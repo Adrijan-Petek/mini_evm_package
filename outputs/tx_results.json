@@ -1,0 +1,114 @@
+[
+  {
+    "tx": {
+      "from": "alice",
+      "to": "A",
+      "gas": 500,
+      "args": [
+        7
+      ]
+    },
+    "res": {
+      "success": true,
+      "return": 7,
+      "gas_used": 33,
+      "op_counts": {
+        "LOAD": 2,
+        "ADD": 1,
+        "STORE": 1,
+        "RETURN": 1
+      },
+      "call_trace": [],
+      "duration_s": 1.8702000005532682e-05
+    }
+  },
+  {
+    "tx": {
+      "from": "bob",
+      "to": "B",
+      "gas": 800,
+      "args": []
+    },
+    "res": {
+      "success": true,
+      "return": 90,
+      "gas_used": 75,
+      "op_counts": {
+        "PUSH": 2,
+        "CALL": 1,
+        "LOAD": 3,
+        "ADD": 1,
+        "STORE": 2,
+        "RETURN": 2,
+        "MUL": 1
+      },
+      "call_trace": [
+        {
+          "type": "call",
+          "caller": "B",
+          "callee": "A",
+          "gas_provided": 200,
+          "gas_used": 33,
+          "return": 9
+        }
+      ],
+      "duration_s": 3.062899999406454e-05
+    }
+  },
+  {
+    "tx": {
+      "from": "carol",
+      "to": "A",
+      "gas": 300,
+      "args": [
+        3
+      ]
+    },
+    "res": {
+      "success": true,
+      "return": 12,
+      "gas_used": 33,
+      "op_counts": {
+        "LOAD": 2,
+        "ADD": 1,
+        "STORE": 1,
+        "RETURN": 1
+      },
+      "call_trace": [],
+      "duration_s": 1.6705999996702303e-05
+    }
+  },
+  {
+    "tx": {
+      "from": "dave",
+      "to": "B",
+      "gas": 800,
+      "args": []
+    },
+    "res": {
+      "success": true,
+      "return": 140,
+      "gas_used": 75,
+      "op_counts": {
+        "PUSH": 2,
+        "CALL": 1,
+        "LOAD": 3,
+        "ADD": 1,
+        "STORE": 2,
+        "RETURN": 2,
+        "MUL": 1
+      },
+      "call_trace": [
+        {
+          "type": "call",
+          "caller": "B",
+          "callee": "A",
+          "gas_provided": 200,
+          "gas_used": 33,
+          "return": 14
+        }
+      ],
+      "duration_s": 2.2256999997694038e-05
+    }
+  }
+]
