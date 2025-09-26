@@ -10,3 +10,7 @@ pytest-cov>=4.0.0
 
 # Docs (optional, if you want auto-generated docs later)
 pdoc>=14.0.0
+
+# requirements.txt
+black>=24.0.0
+isort>=5.12.0
